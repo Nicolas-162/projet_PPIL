@@ -1,0 +1,32 @@
+\doxysection{Winsock\+Initializer.\+h}
+\hypertarget{_winsock_initializer_8h_source}{}\label{_winsock_initializer_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WINSOCKINITIALIZER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WINSOCKINITIALIZER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <winsock2.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }WinsockInitializer\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ WinsockInitializer()\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ WSADATA\ wsa;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ WSAStartup(MAKEWORD(2,\ 2),\ \&wsa);}
+\DoxyCodeLine{00011\ \ \ \ \ \}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \string~WinsockInitializer()\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ WSACleanup();}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ WinsockInitializer\&\ getInstance()\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ WinsockInitializer\ instance;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ WinsockInitializer(\textcolor{keyword}{const}\ WinsockInitializer\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00024\ \ \ \ \ WinsockInitializer\&\ operator=(\textcolor{keyword}{const}\ WinsockInitializer\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WINSOCKINITIALIZER\_H}}
+
+\end{DoxyCode}

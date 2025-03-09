@@ -1,0 +1,32 @@
+\doxysection{Cercle.\+h}
+\hypertarget{_cercle_8h_source}{}\label{_cercle_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CERCLE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CERCLE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}FormeGeometrique.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Point2D.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }Cercle\ :\ \textcolor{keyword}{public}\ FormeGeometrique\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_point2_d}{Point2D}}\ centre;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ rayon;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ Cercle(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ centre,\ \textcolor{keywordtype}{double}\ rayon,\ \textcolor{keyword}{const}\ std::string\&\ couleur)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ :\ FormeGeometrique(couleur),\ centre(centre),\ rayon(rayon)\ \{\}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_point2_d}{Point2D}}\ getCentre()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ centre;\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ getRayon()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ rayon;\ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ toString()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::ostringstream\ os;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Cercle\ [Centre:\ "{}}\ <<\ centre.toString()\ <<\ \textcolor{stringliteral}{"{},\ Rayon:\ "{}}\ <<\ rayon\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ Couleur:\ "{}}\ <<\ couleur\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os.str();}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CERCLE\_H}}
+
+\end{DoxyCode}

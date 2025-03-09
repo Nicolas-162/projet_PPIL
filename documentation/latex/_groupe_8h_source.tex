@@ -1,0 +1,77 @@
+\doxysection{Groupe.\+h}
+\hypertarget{_groupe_8h_source}{}\label{_groupe_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GROUPE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GROUPE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}FormeGeometrique.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }Groupe\ :\ \textcolor{keyword}{public}\ FormeGeometrique\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ std::vector<std::shared\_ptr<FormeGeometrique>>\ formes;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ Groupe(\textcolor{keyword}{const}\ std::string\&\ couleur)\ :\ FormeGeometrique(couleur)\ \{\}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ ajouterForme(\textcolor{keyword}{const}\ std::shared\_ptr<FormeGeometrique>\&\ forme)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ formes.push\_back(forme);}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<std::shared\_ptr<FormeGeometrique>>\ getFormes()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ formes;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ toString()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::ostringstream\ os;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Groupe\ [Couleur:\ "{}}\ <<\ couleur\ <<\ \textcolor{stringliteral}{"{},\ Formes:\ "{}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ forme\ :\ formes)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ os\ <<\ forme-\/>toString()\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os.str();}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{double}\ area()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ totalArea\ =\ 0.0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ forme\ :\ formes)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ totalArea\ +=\ forme-\/>area();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ totalArea;}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ translater(\textcolor{keywordtype}{double}\ dx,\ \textcolor{keywordtype}{double}\ dy)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ forme\ :\ formes)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ forme-\/>translater(dx,\ dy);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ homothetie(\textcolor{keywordtype}{double}\ cx,\ \textcolor{keywordtype}{double}\ cy,\ \textcolor{keywordtype}{double}\ rapport)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ forme\ :\ formes)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ forme-\/>homothetie(cx,\ cy,\ rapport);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ rotation(\textcolor{keywordtype}{double}\ cx,\ \textcolor{keywordtype}{double}\ cy,\ \textcolor{keywordtype}{double}\ angle)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ forme\ :\ formes)\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ forme-\/>rotation(cx,\ cy,\ angle);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ accept(\mbox{\hyperlink{class_visitor}{Visitor}}\&\ visitor)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ forme\ :\ formes)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ forme-\/>setCouleur(couleur);\ \textcolor{comment}{//\ Apply\ group\ color\ to\ each\ shape}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ forme-\/>accept(visitor);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{operator}\ std::string()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ toString();}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GROUPE\_H}}
+
+\end{DoxyCode}

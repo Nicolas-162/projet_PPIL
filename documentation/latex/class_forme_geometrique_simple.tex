@@ -1,0 +1,126 @@
+\doxysection{Forme\+Geometrique\+Simple Class Reference}
+\hypertarget{class_forme_geometrique_simple}{}\label{class_forme_geometrique_simple}\index{FormeGeometriqueSimple@{FormeGeometriqueSimple}}
+Inheritance diagram for Forme\+Geometrique\+Simple\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_forme_geometrique_simple}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_forme_geometrique_simple_ab1cb8e0e4dd51bd502192a0595591771}\label{class_forme_geometrique_simple_ab1cb8e0e4dd51bd502192a0595591771} 
+{\bfseries Forme\+Geometrique\+Simple} (const std\+::string \&couleur, double x, double y)
+\item 
+std\+::string \mbox{\hyperlink{class_forme_geometrique_simple_adfb3c3d4fa477ed4150f2b8054944176}{to\+String}} () const override
+\item 
+double \mbox{\hyperlink{class_forme_geometrique_simple_a52eacc54097c181fb8c1896439e85361}{area}} () const override
+\item 
+void \mbox{\hyperlink{class_forme_geometrique_simple_ac2b38f0178356f121d7908cf63e48899}{translater}} (double dx, double dy) override
+\item 
+void \mbox{\hyperlink{class_forme_geometrique_simple_a04bdcde3f13f63e0562bbcdd03575dd7}{homothetie}} (double cx, double cy, double rapport) override
+\item 
+void \mbox{\hyperlink{class_forme_geometrique_simple_abfe3558ddca6df59f841e87a2df391b1}{rotation}} (double cx, double cy, double angle) override
+\item 
+void \mbox{\hyperlink{class_forme_geometrique_simple_a3dc743c5aa7f61677876b1f51b54047f}{accept}} (\mbox{\hyperlink{class_visitor}{Visitor}} \&visitor) override
+\item 
+\mbox{\hyperlink{class_forme_geometrique_simple_a3b97eaa6e675524212e1dbe85eb3df6e}{operator std\+::string}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Forme\+Geometrique} (const std\+::string \&couleur)
+\item 
+std\+::string {\bfseries get\+Couleur} () const
+\item 
+void {\bfseries set\+Couleur} (const std\+::string \&couleur)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries validate\+Couleur} (const std\+::string \&couleur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries couleur}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_forme_geometrique_simple_a3dc743c5aa7f61677876b1f51b54047f}\index{FormeGeometriqueSimple@{FormeGeometriqueSimple}!accept@{accept}}
+\index{accept@{accept}!FormeGeometriqueSimple@{FormeGeometriqueSimple}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily \label{class_forme_geometrique_simple_a3dc743c5aa7f61677876b1f51b54047f} 
+void Forme\+Geometrique\+Simple\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visitor}{Visitor}} \&}]{visitor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+\Hypertarget{class_forme_geometrique_simple_a52eacc54097c181fb8c1896439e85361}\index{FormeGeometriqueSimple@{FormeGeometriqueSimple}!area@{area}}
+\index{area@{area}!FormeGeometriqueSimple@{FormeGeometriqueSimple}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily \label{class_forme_geometrique_simple_a52eacc54097c181fb8c1896439e85361} 
+double Forme\+Geometrique\+Simple\+::area (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+\Hypertarget{class_forme_geometrique_simple_a04bdcde3f13f63e0562bbcdd03575dd7}\index{FormeGeometriqueSimple@{FormeGeometriqueSimple}!homothetie@{homothetie}}
+\index{homothetie@{homothetie}!FormeGeometriqueSimple@{FormeGeometriqueSimple}}
+\doxysubsubsection{\texorpdfstring{homothetie()}{homothetie()}}
+{\footnotesize\ttfamily \label{class_forme_geometrique_simple_a04bdcde3f13f63e0562bbcdd03575dd7} 
+void Forme\+Geometrique\+Simple\+::homothetie (\begin{DoxyParamCaption}\item[{double}]{cx}{, }\item[{double}]{cy}{, }\item[{double}]{rapport}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+\Hypertarget{class_forme_geometrique_simple_a3b97eaa6e675524212e1dbe85eb3df6e}\index{FormeGeometriqueSimple@{FormeGeometriqueSimple}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!FormeGeometriqueSimple@{FormeGeometriqueSimple}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily \label{class_forme_geometrique_simple_a3b97eaa6e675524212e1dbe85eb3df6e} 
+Forme\+Geometrique\+Simple\+::operator std\+::string (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+\Hypertarget{class_forme_geometrique_simple_abfe3558ddca6df59f841e87a2df391b1}\index{FormeGeometriqueSimple@{FormeGeometriqueSimple}!rotation@{rotation}}
+\index{rotation@{rotation}!FormeGeometriqueSimple@{FormeGeometriqueSimple}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \label{class_forme_geometrique_simple_abfe3558ddca6df59f841e87a2df391b1} 
+void Forme\+Geometrique\+Simple\+::rotation (\begin{DoxyParamCaption}\item[{double}]{cx}{, }\item[{double}]{cy}{, }\item[{double}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+\Hypertarget{class_forme_geometrique_simple_adfb3c3d4fa477ed4150f2b8054944176}\index{FormeGeometriqueSimple@{FormeGeometriqueSimple}!toString@{toString}}
+\index{toString@{toString}!FormeGeometriqueSimple@{FormeGeometriqueSimple}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_forme_geometrique_simple_adfb3c3d4fa477ed4150f2b8054944176} 
+std\+::string Forme\+Geometrique\+Simple\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+\Hypertarget{class_forme_geometrique_simple_ac2b38f0178356f121d7908cf63e48899}\index{FormeGeometriqueSimple@{FormeGeometriqueSimple}!translater@{translater}}
+\index{translater@{translater}!FormeGeometriqueSimple@{FormeGeometriqueSimple}}
+\doxysubsubsection{\texorpdfstring{translater()}{translater()}}
+{\footnotesize\ttfamily \label{class_forme_geometrique_simple_ac2b38f0178356f121d7908cf63e48899} 
+void Forme\+Geometrique\+Simple\+::translater (\begin{DoxyParamCaption}\item[{double}]{dx}{, }\item[{double}]{dy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Forme\+Geometrique\+Simple.\+h\end{DoxyCompactItemize}

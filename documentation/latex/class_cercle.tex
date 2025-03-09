@@ -1,0 +1,73 @@
+\doxysection{Cercle Class Reference}
+\hypertarget{class_cercle}{}\label{class_cercle}\index{Cercle@{Cercle}}
+Inheritance diagram for Cercle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cercle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cercle_a5d4f62e1d7dbb0fed28725165a9abee6}\label{class_cercle_a5d4f62e1d7dbb0fed28725165a9abee6} 
+{\bfseries Cercle} (const \mbox{\hyperlink{class_point2_d}{Point2D}} \&centre, double rayon, const std\+::string \&couleur)
+\item 
+\Hypertarget{class_cercle_a47c273684367c86b0a20e22a71a9aa29}\label{class_cercle_a47c273684367c86b0a20e22a71a9aa29} 
+\mbox{\hyperlink{class_point2_d}{Point2D}} {\bfseries get\+Centre} () const
+\item 
+\Hypertarget{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}\label{class_cercle_abc1c953fd5ef431158e89dc8344b1de1} 
+double {\bfseries get\+Rayon} () const
+\item 
+std\+::string \mbox{\hyperlink{class_cercle_a0e26df05f0206f31bf29fb7f54b5cf71}{to\+String}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Forme\+Geometrique} (const std\+::string \&couleur)
+\item 
+std\+::string {\bfseries get\+Couleur} () const
+\item 
+void {\bfseries set\+Couleur} (const std\+::string \&couleur)
+\item 
+virtual double {\bfseries area} () const =0
+\item 
+virtual void {\bfseries translater} (double dx, double dy)=0
+\item 
+virtual void {\bfseries homothetie} (double cx, double cy, double rapport)=0
+\item 
+virtual void {\bfseries rotation} (double cx, double cy, double angle)=0
+\item 
+virtual void {\bfseries accept} (\mbox{\hyperlink{class_visitor}{Visitor}} \&visitor)=0
+\item 
+virtual {\bfseries operator std\+::string} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries validate\+Couleur} (const std\+::string \&couleur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries couleur}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cercle_a0e26df05f0206f31bf29fb7f54b5cf71}\index{Cercle@{Cercle}!toString@{toString}}
+\index{toString@{toString}!Cercle@{Cercle}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_cercle_a0e26df05f0206f31bf29fb7f54b5cf71} 
+std\+::string Cercle\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Cercle.\+h\item 
+Cercle.\+cpp\end{DoxyCompactItemize}

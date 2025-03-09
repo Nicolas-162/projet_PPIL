@@ -1,0 +1,73 @@
+\doxysection{Segment Class Reference}
+\hypertarget{class_segment}{}\label{class_segment}\index{Segment@{Segment}}
+Inheritance diagram for Segment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_segment}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_segment_ac47e4a1357e42a1e0ba59c34e2069f59}\label{class_segment_ac47e4a1357e42a1e0ba59c34e2069f59} 
+{\bfseries Segment} (const \mbox{\hyperlink{class_point2_d}{Point2D}} \&p1, const \mbox{\hyperlink{class_point2_d}{Point2D}} \&p2, const std\+::string \&couleur)
+\item 
+\Hypertarget{class_segment_ab627007f3f7fb8987ae71f203f8272b8}\label{class_segment_ab627007f3f7fb8987ae71f203f8272b8} 
+\mbox{\hyperlink{class_point2_d}{Point2D}} {\bfseries get\+P1} () const
+\item 
+\Hypertarget{class_segment_a1a44114b4f301769f82317f7deff4af7}\label{class_segment_a1a44114b4f301769f82317f7deff4af7} 
+\mbox{\hyperlink{class_point2_d}{Point2D}} {\bfseries get\+P2} () const
+\item 
+std\+::string \mbox{\hyperlink{class_segment_a2b38786e2be1f86554308f1804cb1d1c}{to\+String}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Forme\+Geometrique} (const std\+::string \&couleur)
+\item 
+std\+::string {\bfseries get\+Couleur} () const
+\item 
+void {\bfseries set\+Couleur} (const std\+::string \&couleur)
+\item 
+virtual double {\bfseries area} () const =0
+\item 
+virtual void {\bfseries translater} (double dx, double dy)=0
+\item 
+virtual void {\bfseries homothetie} (double cx, double cy, double rapport)=0
+\item 
+virtual void {\bfseries rotation} (double cx, double cy, double angle)=0
+\item 
+virtual void {\bfseries accept} (\mbox{\hyperlink{class_visitor}{Visitor}} \&visitor)=0
+\item 
+virtual {\bfseries operator std\+::string} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries validate\+Couleur} (const std\+::string \&couleur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries couleur}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_segment_a2b38786e2be1f86554308f1804cb1d1c}\index{Segment@{Segment}!toString@{toString}}
+\index{toString@{toString}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_segment_a2b38786e2be1f86554308f1804cb1d1c} 
+std\+::string Segment\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Segment.\+h\item 
+Segment.\+cpp\end{DoxyCompactItemize}

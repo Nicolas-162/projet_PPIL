@@ -1,0 +1,76 @@
+\doxysection{Triangle Class Reference}
+\hypertarget{class_triangle}{}\label{class_triangle}\index{Triangle@{Triangle}}
+Inheritance diagram for Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_triangle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_triangle_a7d29ce9a9ba8979be8a755ad34d685ca}\label{class_triangle_a7d29ce9a9ba8979be8a755ad34d685ca} 
+{\bfseries Triangle} (const \mbox{\hyperlink{class_point2_d}{Point2D}} \&p1, const \mbox{\hyperlink{class_point2_d}{Point2D}} \&p2, const \mbox{\hyperlink{class_point2_d}{Point2D}} \&p3, const std\+::string \&couleur)
+\item 
+\Hypertarget{class_triangle_a283ba278ef6e3b1c129217c0de15ed12}\label{class_triangle_a283ba278ef6e3b1c129217c0de15ed12} 
+\mbox{\hyperlink{class_point2_d}{Point2D}} {\bfseries get\+P1} () const
+\item 
+\Hypertarget{class_triangle_a871c11b2d50ce4d1b08b1e26ac9ad4cd}\label{class_triangle_a871c11b2d50ce4d1b08b1e26ac9ad4cd} 
+\mbox{\hyperlink{class_point2_d}{Point2D}} {\bfseries get\+P2} () const
+\item 
+\Hypertarget{class_triangle_a7030e0797246c81495a3d2e10b2e0994}\label{class_triangle_a7030e0797246c81495a3d2e10b2e0994} 
+\mbox{\hyperlink{class_point2_d}{Point2D}} {\bfseries get\+P3} () const
+\item 
+std\+::string \mbox{\hyperlink{class_triangle_addb2a9f7631d1ea8a59aab5a8e2ba7ff}{to\+String}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Forme\+Geometrique} (const std\+::string \&couleur)
+\item 
+std\+::string {\bfseries get\+Couleur} () const
+\item 
+void {\bfseries set\+Couleur} (const std\+::string \&couleur)
+\item 
+virtual double {\bfseries area} () const =0
+\item 
+virtual void {\bfseries translater} (double dx, double dy)=0
+\item 
+virtual void {\bfseries homothetie} (double cx, double cy, double rapport)=0
+\item 
+virtual void {\bfseries rotation} (double cx, double cy, double angle)=0
+\item 
+virtual void {\bfseries accept} (\mbox{\hyperlink{class_visitor}{Visitor}} \&visitor)=0
+\item 
+virtual {\bfseries operator std\+::string} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries validate\+Couleur} (const std\+::string \&couleur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries couleur}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_triangle_addb2a9f7631d1ea8a59aab5a8e2ba7ff}\index{Triangle@{Triangle}!toString@{toString}}
+\index{toString@{toString}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_triangle_addb2a9f7631d1ea8a59aab5a8e2ba7ff} 
+std\+::string Triangle\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Triangle.\+h\item 
+Triangle.\+cpp\end{DoxyCompactItemize}

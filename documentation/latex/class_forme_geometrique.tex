@@ -1,0 +1,58 @@
+\doxysection{Forme\+Geometrique Class Reference}
+\hypertarget{class_forme_geometrique}{}\label{class_forme_geometrique}\index{FormeGeometrique@{FormeGeometrique}}
+Inheritance diagram for Forme\+Geometrique\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.145194cm]{class_forme_geometrique}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_forme_geometrique_a6b2075ab7db09bbd31d7f7d8e802300d}\label{class_forme_geometrique_a6b2075ab7db09bbd31d7f7d8e802300d} 
+{\bfseries Forme\+Geometrique} (const std\+::string \&couleur)
+\item 
+\Hypertarget{class_forme_geometrique_a814208ea7ffdf4b65db16094f045ba07}\label{class_forme_geometrique_a814208ea7ffdf4b65db16094f045ba07} 
+std\+::string {\bfseries get\+Couleur} () const
+\item 
+\Hypertarget{class_forme_geometrique_a711286b608bf88cf7c8e49c7f5576103}\label{class_forme_geometrique_a711286b608bf88cf7c8e49c7f5576103} 
+void {\bfseries set\+Couleur} (const std\+::string \&couleur)
+\item 
+\Hypertarget{class_forme_geometrique_a76419a050639b655c408fff200d36825}\label{class_forme_geometrique_a76419a050639b655c408fff200d36825} 
+virtual std\+::string {\bfseries to\+String} () const =0
+\item 
+\Hypertarget{class_forme_geometrique_a7b8ad4069417a1e7ee39aea108cb9564}\label{class_forme_geometrique_a7b8ad4069417a1e7ee39aea108cb9564} 
+virtual double {\bfseries area} () const =0
+\item 
+\Hypertarget{class_forme_geometrique_a5a41a3a047e6863c43c1dbf4918c368e}\label{class_forme_geometrique_a5a41a3a047e6863c43c1dbf4918c368e} 
+virtual void {\bfseries translater} (double dx, double dy)=0
+\item 
+\Hypertarget{class_forme_geometrique_a82d51fc003777f53e8ab1bb153ae1d2e}\label{class_forme_geometrique_a82d51fc003777f53e8ab1bb153ae1d2e} 
+virtual void {\bfseries homothetie} (double cx, double cy, double rapport)=0
+\item 
+\Hypertarget{class_forme_geometrique_a1b11f93109134b3bb1d29a81b8761633}\label{class_forme_geometrique_a1b11f93109134b3bb1d29a81b8761633} 
+virtual void {\bfseries rotation} (double cx, double cy, double angle)=0
+\item 
+\Hypertarget{class_forme_geometrique_a53d3220d441666bb40f32e6d056c45b8}\label{class_forme_geometrique_a53d3220d441666bb40f32e6d056c45b8} 
+virtual void {\bfseries accept} (\mbox{\hyperlink{class_visitor}{Visitor}} \&visitor)=0
+\item 
+\Hypertarget{class_forme_geometrique_a842ca56f1201c0733e135ab34fb2034c}\label{class_forme_geometrique_a842ca56f1201c0733e135ab34fb2034c} 
+virtual {\bfseries operator std\+::string} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_forme_geometrique_a544b749b64d763992f66b21a6ed0dcdb}\label{class_forme_geometrique_a544b749b64d763992f66b21a6ed0dcdb} 
+void {\bfseries validate\+Couleur} (const std\+::string \&couleur)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_forme_geometrique_a510b823eba06c2c4e7a49a115facd346}\label{class_forme_geometrique_a510b823eba06c2c4e7a49a115facd346} 
+std\+::string {\bfseries couleur}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Forme\+Geometrique.\+h\end{DoxyCompactItemize}

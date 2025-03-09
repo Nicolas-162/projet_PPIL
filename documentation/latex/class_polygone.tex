@@ -1,0 +1,70 @@
+\doxysection{Polygone Class Reference}
+\hypertarget{class_polygone}{}\label{class_polygone}\index{Polygone@{Polygone}}
+Inheritance diagram for Polygone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_polygone}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_polygone_a4ca3b1f46d71704e39ffeaf7ac15c190}\label{class_polygone_a4ca3b1f46d71704e39ffeaf7ac15c190} 
+{\bfseries Polygone} (const std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$ \&sommets, const std\+::string \&couleur)
+\item 
+\Hypertarget{class_polygone_ae59de6f4bbde9d816ee6ad0e98e93bcc}\label{class_polygone_ae59de6f4bbde9d816ee6ad0e98e93bcc} 
+std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$ {\bfseries get\+Sommets} () const
+\item 
+std\+::string \mbox{\hyperlink{class_polygone_a3d47e74c216b57395fb197ad2ce4bc03}{to\+String}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Forme\+Geometrique} (const std\+::string \&couleur)
+\item 
+std\+::string {\bfseries get\+Couleur} () const
+\item 
+void {\bfseries set\+Couleur} (const std\+::string \&couleur)
+\item 
+virtual double {\bfseries area} () const =0
+\item 
+virtual void {\bfseries translater} (double dx, double dy)=0
+\item 
+virtual void {\bfseries homothetie} (double cx, double cy, double rapport)=0
+\item 
+virtual void {\bfseries rotation} (double cx, double cy, double angle)=0
+\item 
+virtual void {\bfseries accept} (\mbox{\hyperlink{class_visitor}{Visitor}} \&visitor)=0
+\item 
+virtual {\bfseries operator std\+::string} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries validate\+Couleur} (const std\+::string \&couleur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries couleur}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_polygone_a3d47e74c216b57395fb197ad2ce4bc03}\index{Polygone@{Polygone}!toString@{toString}}
+\index{toString@{toString}!Polygone@{Polygone}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_polygone_a3d47e74c216b57395fb197ad2ce4bc03} 
+std\+::string Polygone\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_forme_geometrique}{Forme\+Geometrique}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Polygone.\+h\item 
+Polygone.\+cpp\end{DoxyCompactItemize}

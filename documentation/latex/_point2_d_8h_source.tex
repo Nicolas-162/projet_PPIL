@@ -1,0 +1,63 @@
+\doxysection{Point2\+D.\+h}
+\hypertarget{_point2_d_8h_source}{}\label{_point2_d_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ POINT2D\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ POINT2D\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Point2D\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ x,\ y;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Constructeurs}}
+\DoxyCodeLine{00014\ \ \ \ \ Point2D(\textcolor{keywordtype}{double}\ \_x\ =\ 0,\ \textcolor{keywordtype}{double}\ \_y\ =\ 0)\ :\ x(\_x),\ y(\_y)\ \{\}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Accesseurs}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ getX()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ x;\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ getY()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ y;\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ setX(\textcolor{keywordtype}{double}\ \_x)\ \{\ x\ =\ \_x;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ setY(\textcolor{keywordtype}{double}\ \_y)\ \{\ y\ =\ \_y;\ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Distance\ entre\ deux\ points}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ distance(\textcolor{keyword}{const}\ Point2D\&\ autre)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::sqrt(std::pow(autre.x\ -\/\ x,\ 2)\ +\ std::pow(autre.y\ -\/\ y,\ 2));}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Opérateur\ de\ conversion\ en\ string}}
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ toString()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::ostringstream\ os;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}("{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os.str();}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Surcharge\ des\ opérateurs}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ Point2D\&\ p)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ os\ <<\ p.toString();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ Point2D\ operator+(\textcolor{keyword}{const}\ Point2D\&\ p)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Point2D(x\ +\ p.x,\ y\ +\ p.y);}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ Point2D\ operator-\/(\textcolor{keyword}{const}\ Point2D\&\ p)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Point2D(x\ -\/\ p.x,\ y\ -\/\ p.y);}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ Point2D\ operator*(\textcolor{keywordtype}{double}\ scalaire)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Point2D(x\ *\ scalaire,\ y\ *\ scalaire);}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ Point2D\&\ p)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (x\ ==\ p.x)\ \&\&\ (y\ ==\ p.y);}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ POINT2D\_H}}
+
+\end{DoxyCode}

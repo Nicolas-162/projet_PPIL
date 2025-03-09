@@ -1,0 +1,83 @@
+\doxysection{Vecteur2\+D.\+h}
+\hypertarget{_vecteur2_d_8h_source}{}\label{_vecteur2_d_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VECTEUR2D\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VECTEUR2D\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Point2D.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }Vecteur2D\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_point2_d}{Point2D}}\ origine;\ \ \textcolor{comment}{//\ Origine\ du\ vecteur}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_point2_d}{Point2D}}\ direction;\ \textcolor{comment}{//\ Extrémité\ du\ vecteur}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Constructeurs}}
+\DoxyCodeLine{00016\ \ \ \ \ Vecteur2D(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ p1\ =\ \mbox{\hyperlink{class_point2_d}{Point2D}}(),\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ p2\ =\ \mbox{\hyperlink{class_point2_d}{Point2D}}())\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ :\ origine(p1),\ direction(p2)\ \{\}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Accesseurs}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_point2_d}{Point2D}}\ getOrigine()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ origine;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_point2_d}{Point2D}}\ getDirection()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ direction;\ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ setOrigine(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ p)\ \{\ origine\ =\ p;\ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ setDirection(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ p)\ \{\ direction\ =\ p;\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Longueur\ du\ vecteur}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ norme()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ origine.distance(direction);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Calcul\ du\ vecteur\ résultant}}
+\DoxyCodeLine{00032\ \ \ \ \ Vecteur2D\ operator+(\textcolor{keyword}{const}\ Vecteur2D\&\ v)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Vecteur2D(origine,\ \mbox{\hyperlink{class_point2_d}{Point2D}}(direction.getX()\ +\ v.direction.getX(),}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ direction.getY()\ +\ v.direction.getY()));}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Multiplication\ par\ un\ scalaire}}
+\DoxyCodeLine{00038\ \ \ \ \ Vecteur2D\ operator*(\textcolor{keywordtype}{double}\ scalaire)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Vecteur2D(origine,\ \mbox{\hyperlink{class_point2_d}{Point2D}}(direction.getX()\ *\ scalaire,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ direction.getY()\ *\ scalaire));}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Produit\ scalaire}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{double}\ produitScalaire(\textcolor{keyword}{const}\ Vecteur2D\&\ v)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ dx1\ =\ direction.getX()\ -\/\ origine.getX();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ dy1\ =\ direction.getY()\ -\/\ origine.getY();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ dx2\ =\ v.direction.getX()\ -\/\ v.origine.getX();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ dy2\ =\ v.direction.getY()\ -\/\ v.origine.getY();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dx1\ *\ dx2\ +\ dy1\ *\ dy2;}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Rotation\ du\ vecteur\ autour\ de\ l'origine\ d'un\ angle\ (en\ radians)}}
+\DoxyCodeLine{00053\ \ \ \ \ Vecteur2D\ rotation(\textcolor{keywordtype}{double}\ angle)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ dx\ =\ direction.getX()\ -\/\ origine.getX();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ dy\ =\ direction.getY()\ -\/\ origine.getY();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ newX\ =\ dx\ *\ cos(angle)\ -\/\ dy\ *\ sin(angle);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ newY\ =\ dx\ *\ sin(angle)\ +\ dy\ *\ cos(angle);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Vecteur2D(origine,\ \mbox{\hyperlink{class_point2_d}{Point2D}}(origine.getX()\ +\ newX,\ origine.getY()\ +\ newY));}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ Conversion\ en\ string}}
+\DoxyCodeLine{00064\ \ \ \ \ std::string\ toString()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ std::ostringstream\ os;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}[Origine:\ "{}}\ <<\ origine.toString()\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ Direction:\ "{}}\ <<\ direction.toString()\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os.str();}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ Affichage}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ Vecteur2D\&\ v)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ os\ <<\ v.toString();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VECTEUR2D\_H}}
+
+\end{DoxyCode}
