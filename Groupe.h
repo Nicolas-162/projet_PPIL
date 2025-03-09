@@ -48,6 +48,13 @@ public:
             forme->rotation(cx, cy, angle);
         }
     }
+
+    void accept(Visitor& visitor) override {
+        for (auto& forme : formes) {
+            forme->setCouleur(couleur); // Apply group color to each shape
+            forme->accept(visitor);
+        }
+    }
 };
 
 #endif // GROUPE_H
