@@ -30,6 +30,11 @@ public:
     }
 
     virtual std::string toString() const = 0;
+
+    // Transformation methods
+    virtual void translater(double dx, double dy) = 0;
+    virtual void homothetie(double cx, double cy, double rapport) = 0;
+    virtual void rotation(double cx, double cy, double angle) = 0;
 };
 
 #endif // FORMEGEOMETRIQUE_H

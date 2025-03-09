@@ -30,6 +30,24 @@ public:
         os << "]";
         return os.str();
     }
+
+    void translater(double dx, double dy) override {
+        for (auto& forme : formes) {
+            forme->translater(dx, dy);
+        }
+    }
+
+    void homothetie(double cx, double cy, double rapport) override {
+        for (auto& forme : formes) {
+            forme->homothetie(cx, cy, rapport);
+        }
+    }
+
+    void rotation(double cx, double cy, double angle) override {
+        for (auto& forme : formes) {
+            forme->rotation(cx, cy, angle);
+        }
+    }
 };
 
 #endif // GROUPE_H
