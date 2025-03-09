@@ -4,6 +4,7 @@
 #include <string>
 #include <stdexcept>
 #include <set>
+#include "Visitor.h"
 
 class FormeGeometrique {
 protected:
@@ -35,6 +36,9 @@ public:
     virtual void translater(double dx, double dy) = 0;
     virtual void homothetie(double cx, double cy, double rapport) = 0;
     virtual void rotation(double cx, double cy, double angle) = 0;
+
+    // Accept method for Visitor
+    virtual void accept(Visitor& visitor) = 0;
 };
 
 #endif // FORMEGEOMETRIQUE_H
