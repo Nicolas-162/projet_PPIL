@@ -3,7 +3,6 @@
 
 #include "Visitor.h"
 #include <fstream>
-#include "FormeGeometrique.h"
 
 class SaveVisitor : public Visitor {
 private:
