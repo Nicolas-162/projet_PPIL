@@ -75,5 +75,11 @@ int main() {
     }
     inFile.close();
 
+    // Calculate and print the area of the group
+    std::cout << "Total area of the group: " << groupe.area() << std::endl;
+
+    // Print the group details
+    std::cout << std::string(groupe) << std::endl;
+
     return 0;
 }

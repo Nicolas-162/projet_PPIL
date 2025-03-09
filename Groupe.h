@@ -31,6 +31,14 @@ public:
         return os.str();
     }
 
+    double area() const override {
+        double totalArea = 0.0;
+        for (const auto& forme : formes) {
+            totalArea += forme->area();
+        }
+        return totalArea;
+    }
+
     void translater(double dx, double dy) override {
         for (auto& forme : formes) {
             forme->translater(dx, dy);
@@ -54,6 +62,10 @@ public:
             forme->setCouleur(couleur); // Apply group color to each shape
             forme->accept(visitor);
         }
+    }
+
+    operator std::string() const override {
+        return toString();
     }
 };
 

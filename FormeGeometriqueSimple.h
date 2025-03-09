@@ -18,6 +18,11 @@ public:
         return oss.str();
     }
 
+    double area() const override {
+        // Assuming this is a point, the area is zero.
+        return 0.0;
+    }
+
     void translater(double dx, double dy) override {
         x += dx;
         y += dy;
@@ -37,6 +42,10 @@ public:
 
     void accept(Visitor& visitor) override {
         visitor.visit(*this);
+    }
+
+    operator std::string() const override {
+        return toString();
     }
 };
 

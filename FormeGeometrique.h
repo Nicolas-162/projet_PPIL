@@ -31,6 +31,7 @@ public:
     }
 
     virtual std::string toString() const = 0;
+    virtual double area() const = 0;
 
     // Transformation methods
     virtual void translater(double dx, double dy) = 0;
@@ -39,6 +40,11 @@ public:
 
     // Accept method for Visitor
     virtual void accept(Visitor& visitor) = 0;
+
+    // String conversion operator
+    virtual operator std::string() const {
+        return toString();
+    }
 };
 
 #endif // FORMEGEOMETRIQUE_H
